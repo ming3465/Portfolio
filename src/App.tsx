@@ -4,7 +4,8 @@ import Navbar from './components/Navbar';
 import Timeline from './components/Timeline';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, X } from 'lucide-react';
+import Picture from './public/SUTOLIMIN_WIDJAJA.jpg';
 
 function App() {
   return (
@@ -72,13 +73,13 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="https://github.com/ming3465" className="text-gray-600 hover:text-gray-900 transition-colors">
                   <Github className="h-6 w-6" />
                 </a>
                 <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Linkedin className="h-6 w-6" />
+                  <X className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="sutolimin.45@gmail.com" className="text-gray-600 hover:text-gray-900 transition-colors">
                   <Mail className="h-6 w-6" />
                 </a>
               </motion.div>
@@ -91,8 +92,8 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="https://your-image-url-here.jpg"
-                alt="Profile"
+                src={Picture}
+                alt="negus"
                 className="rounded-lg shadow-lg mx-auto lg:mx-0"
               />
             </motion.div>
