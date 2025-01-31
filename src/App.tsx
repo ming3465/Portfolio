@@ -62,7 +62,7 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-gray-900">About Me</h2>
               <p className="mt-4 text-lg text-gray-600">
-                I'm a passionate high school student with a strong interest in competitive programming,
+                Hi, My name is Sutolimin Widjaja. I'm a passionate high school student with a strong interest in competitive programming,
                 mathematics, and cybersecurity. With multiple achievements in international olympiads,
                 I strive to solve complex problems and create innovative solutions.
               </p>
@@ -94,7 +94,7 @@ function App() {
               <img
                 src={Picture}
                 alt="negus"
-                className="rounded-lg shadow-lg mx-auto lg:mx-0"
+                className="w-64 h-auto rounded-lg shadow-lg mx-auto lg:mx-0"
               />
             </motion.div>
           </div>

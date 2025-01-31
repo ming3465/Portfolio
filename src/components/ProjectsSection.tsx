@@ -14,10 +14,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Algorithm Visualizer",
-    description: "Interactive visualization of common algorithms",
-    longDescription: "A comprehensive platform for visualizing various algorithms including sorting, pathfinding, and graph algorithms. Built with React and Canvas API, featuring step-by-step visualization and speed control.",
-    technologies: ["React", "TypeScript", "Canvas API", "Algorithms"],
+    title: "Algorithm Reference to CP",
+    description: "Reference for Competitive Programming",
+    longDescription: "A comprehensive platform for reference to various materials in CP including sorting, pathfinding, and graph algorithms.",
+    technologies: ["React", "TypeScript", "CP BOOKS", "Algorithms"],
     image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=2728&ixlib=rb-4.0.3",
     githubUrl: "https://github.com/ming3465",
     liveUrl: "#"

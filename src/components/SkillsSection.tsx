@@ -17,7 +17,7 @@ const SkillsSection = () => {
       description: 'Tools and technologies for web development'
     },
     {
-      title: 'Problem Domains',
+      title: 'Current Focus',
       icon: <Globe className="h-6 w-6" />,
       skills: ['Competitive Programming', 'Cybersecurity', 'Mathematics', 'Cryptography'],
       description: 'Areas of expertise and competition focus'
