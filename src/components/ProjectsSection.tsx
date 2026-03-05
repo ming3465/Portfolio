@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Github, ExternalLink, Code } from 'lucide-react';
 
-interface Project {
+interface Hobbies {
   title: string;
   description: string;
   longDescription: string;
@@ -12,36 +12,27 @@ interface Project {
   liveUrl?: string;
 }
 
-const projects: Project[] = [
+const projects: Hobbies[] = [
   {
     title: "Algorithm Reference to CP",
     description: "Reference for Competitive Programming",
-    longDescription: "A comprehensive platform for reference to various materials in CP including sorting, pathfinding, and graph algorithms.",
-    technologies: ["React", "TypeScript", "CP BOOKS", "Algorithms"],
+    longDescription: "Contains my template, profile, and resources that I use for studying",
+    technologies: ["CP BOOKS", "Algorithms"],
     image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=2728&ixlib=rb-4.0.3",
-    githubUrl: "https://github.com/ming3465",
-    liveUrl: "#"
-  },
-  {
-    title: "Competitive Programming Solutions",
-    description: "Collection of solutions for competitive programming problems",
-    longDescription: "A repository of solutions to various competitive programming problems from platforms like Codeforces, AtCoder, and SPOJ. Includes detailed explanations and time complexity analysis.",
-    technologies: ["C++", "Algorithms", "Data Structures"],
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3",
-    githubUrl: "https://github.com/ming3465"
+    githubUrl: "https://github.com/ming3465/CP-ALGO", 
   },
   {
     title: "Cybersecurity CTF ",
     description: "Custom tools for Capture The Flag competitions",
-    longDescription: "A suite of tools developed for cybersecurity CTF competitions, including custom scripts for cryptography, forensics, and web exploitation challenges.",
+    longDescription: "Contains links to reference as to where I study and where to practice problemsets for CTF.",
     technologies: ["Cryptography", "Network Security"],
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3",
-    githubUrl: "https://github.com/ming3465"
+    githubUrl: "https://github.com/ming3465/CTF"
   }
 ];
 
 const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<Hobbies | null>(null);
 
   return (
     <>
@@ -81,7 +72,7 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </div>
-
+        {/* hobbies  */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -139,7 +130,7 @@ const ProjectsSection = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
                     >
                       <Github className="h-5 w-5" />
-                      View Code
+                      View 
                     </a>
                   )}
                   {selectedProject.liveUrl && (

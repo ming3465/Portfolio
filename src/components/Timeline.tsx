@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, GraduationCap, Trophy } from 'lucide-react';
 
@@ -6,17 +5,17 @@ const Timeline = () => {
   const experiences = [
     {
       type: 'education',
-      title: 'High School - Natural Science',
-      organization: 'SMAK 1 BPK PENABUR Jakarta',
-      period: '2022 - 2025',
-      description: 'Focusing on Natural Science curriculum with emphasis on mathematics and computer science.',
+      title: 'SMU - Software Engineering',
+      organization: 'Singapore Management University',
+      period: '2025 - 2029',
+      description: 'Bachelor of Science - BSc Software Engineering',
     },
     {
       type: 'education',
-      title: 'Junior High School - Bilingual Class',
-      organization: 'SMPK 7 BPK PENABUR Jakarta',
-      period: '2019 - 2022',
-      description: 'Participated in bilingual program with English Based curriculum.',
+      title: 'High School - Natural Science',
+      organization: 'SMAK 1 BPK PENABUR Jakarta',
+      period: '2022 - 2025',
+      description: 'Natural Science curriculum',
     },
     {
       type: 'experience',

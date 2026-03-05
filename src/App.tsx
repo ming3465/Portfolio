@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Timeline from './components/Timeline';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
-import { Github, Linkedin, Mail, X } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import Picture from './public/SUTOLIMIN_WIDJAJA.jpg';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Student | Competitive Programmer | Problem Solver
+              Software Engineer | Competitive Programmer
             </motion.p>
           </div>
         </div>
@@ -62,9 +62,14 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-gray-900">About Me</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Hi, My name is Sutolimin Widjaja. I'm a passionate high school student with a strong interest in competitive programming,
-                mathematics, and cybersecurity. With multiple achievements in international olympiads,
-                I strive to solve complex problems and create innovative solutions.
+                Hi, My name is Sutolimin Widjaja. I'm a University Student with a strong interest in Web Development, AI and
+                mathematics. With multiple achievements in national and international olympiads.
+              </p>
+              <p className="mt-4 text-lg text-gray-600">
+                Email : sutolimin.45@gmail.com
+              </p>
+              <p className="mt-4 text-lg text-gray-600">
+                 Phone : +65 8365 1042
               </p>
               <motion.div 
                 className="mt-6 flex space-x-4"
@@ -74,13 +79,13 @@ function App() {
                 transition={{ delay: 0.3 }}
               >
                 <a href="https://github.com/ming3465" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Github className="h-6 w-6" />
+                  <Github className="h-10 w-10" />
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <X className="h-6 w-6" />
+                <a href="https://www.instagram.com/999ming_/" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <Instagram className="h-10 w-10" />
                 </a>
-                <a href="sutolimin.45@gmail.com" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Mail className="h-6 w-6" />
+                <a href="mailto:sutolimin.45@gmail.com" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <Mail className="h-10 w-10" />
                 </a>
               </motion.div>
             </motion.div>
@@ -93,10 +98,11 @@ function App() {
             >
               <img
                 src={Picture}
-                alt="negus"
-                className="w-64 h-auto rounded-lg shadow-lg mx-auto lg:mx-0"
+                alt="Sutolimin Widjaja Profile Picture"
+                className="w-100 h-auto rounded-lg shadow-lg mx-auto lg:mx-0"
               />
             </motion.div>
+            
           </div>
         </div>
       </motion.section>
@@ -138,9 +144,9 @@ function App() {
         </div>
       </motion.section>
 
-      {/* Projects Section */}
+      {/* Hobbies Section (formerly Projects) */}
       <motion.section 
-        id="projects" 
+        id="hobbies" 
         className="py-20 bg-gray-50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -155,7 +161,7 @@ function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Projects
+            Hobbies
           </motion.h2>
           <ProjectsSection />
         </div>
@@ -188,9 +194,10 @@ function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              I'm always open to discussing new projects and opportunities.
+              
             </motion.p>
-            <motion.button 
+            <motion.a 
+              href="mailto:sutolimin.45@gmail.com"
               className="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -200,7 +207,8 @@ function App() {
               whileTap={{ scale: 0.95 }}
             >
               Contact Me
-            </motion.button>
+            </motion.a>
+            
           </div>
         </div>
       </motion.section>

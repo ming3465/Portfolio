@@ -11,15 +11,27 @@ const SkillsSection = () => {
       description: 'Primary languages used for competitive programming and problem solving'
     },
     {
+      title: 'Frontend',
+      icon: <Code2 className="h-6 w-6" />,
+      skills: ['HTML', 'CSS', 'JavaScript','TypeScript', 'Tailwind CSS', ],
+      description: 'Tools and technologies for web development'
+    },
+    {
+      title: 'Backend',
+      icon: <Code2 className="h-6 w-6" />,
+      skills: ['NodeJS', 'ExpressJS', 'Python', 'MongoDB', 'PostgreSQL','MySQL', 'REST API'],
+      description: 'Tools and technologies for web development'
+    },
+    {
       title: 'Development',
       icon: <Code2 className="h-6 w-6" />,
-      skills: ['React', 'TypeScript', 'Git', 'HTML/CSS'],
+      skills: ['Docker', 'Git'],
       description: 'Tools and technologies for web development'
     },
     {
       title: 'Current Focus',
       icon: <Globe className="h-6 w-6" />,
-      skills: ['Competitive Programming', 'Cybersecurity', 'Mathematics', 'Cryptography'],
+      skills: ['Competitive Programming', 'Full Stack Web Development'],
       description: 'Areas of expertise and competition focus'
     }
   ];

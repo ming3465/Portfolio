@@ -15,12 +15,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <span className="text-2xl font-bold text-gray-800">Portfolio</span>
+            <span className="text-2xl font-bold text-gray-800">Sw.dev</span>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
+              {['About', 'Experience', 'Skills', 'Hobbies', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -46,7 +46,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
-            {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {['About', 'Experience', 'Skills', 'Hobbies', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
