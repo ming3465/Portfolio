@@ -5,7 +5,7 @@ import Timeline from './components/Timeline';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
-import Picture from './public/SUTOLIMIN_WIDJAJA.jpg';
+import Picture from './public/Profile.jpg';
 
 function App() {
   return (
@@ -99,7 +99,7 @@ function App() {
               <img
                 src={Picture}
                 alt="Sutolimin Widjaja Profile Picture"
-                className="w-100 h-auto rounded-lg shadow-lg mx-auto lg:mx-0"
+                className="w-50 h-50 rounded-lg shadow-lg mx-auto lg:mx-0"
               />
             </motion.div>
             
