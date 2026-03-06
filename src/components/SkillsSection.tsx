@@ -31,7 +31,7 @@ const SkillsSection = () => {
     {
       title: 'Current Focus',
       icon: <Globe className="h-6 w-6" />,
-      skills: ['Competitive Programming', 'Full Stack Web Development'],
+      skills: ['Competitive Programming', 'Full Stack Web Development', 'AI'],
       description: 'Areas of expertise and competition focus'
     }
   ];

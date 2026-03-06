@@ -23,6 +23,8 @@ const Timeline = () => {
       organization: 'Various Competitions',
       period: 'Nov 2024 - Present',
       description: 'Actively participating in competitive programming contests and algorithmic problem-solving competitions.',
+      codeforcesRating: 'Codeforces : M.inggg (rated 1500+)',
+      leetcodeRating: 'Leetcode : MikasaN (rated 1850+)',
     },
   ];
 

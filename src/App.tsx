@@ -60,10 +60,10 @@ function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900">About Me</h2>
+              <h2 className="text-3xl font-bold text-gray-900">About me</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Hi, My name is Sutolimin Widjaja. I'm a University Student with a strong interest in Web Development, AI and
-                mathematics. With multiple achievements in national and international olympiads.
+                Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in software Development began when I was 17 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
+                Competitive Programming.
               </p>
               <p className="mt-4 text-lg text-gray-600">
                 Email : sutolimin.45@gmail.com
