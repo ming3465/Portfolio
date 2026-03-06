@@ -81,6 +81,9 @@ function App() {
                 <a href="https://github.com/ming3465" className="text-gray-600 hover:text-gray-900 transition-colors">
                   <Github className="h-10 w-10" />
                 </a>
+                <a href="https://linkedin.com/in/sutolimin-widjaja-0338722b3" className="text-gray-600 hover:text-gray-900 transition-colors">
+                  <Linkedin className="h-10 w-10" />
+                </a>
                 <a href="https://www.instagram.com/999ming_/" className="text-gray-600 hover:text-gray-900 transition-colors">
                   <Instagram className="h-10 w-10" />
                 </a>
