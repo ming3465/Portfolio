@@ -62,7 +62,7 @@ function App() {
             >
               <h2 className="text-3xl font-bold text-gray-900">About me</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in software Development began when I was 17 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
+                Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in Software Development began when I was 17 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
                 Competitive Programming.
               </p>
               <p className="mt-4 text-lg text-gray-600">
