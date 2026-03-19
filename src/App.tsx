@@ -6,7 +6,7 @@ import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import Picture from './public/Profile.jpg';
-
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -215,6 +215,7 @@ function App() {
           </div>
         </div>
       </motion.section>
+      <Analytics/>
     </div>
   );
 }
