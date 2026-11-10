@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Database, Globe, Terminal } from 'lucide-react';
+import { Code2, Globe, Terminal } from 'lucide-react';
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -62,22 +61,22 @@ const SkillsSection = () => {
       {skillCategories.map((category, index) => (
         <motion.div
           key={index}
-          className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          className="p-6 bg-gray-900 rounded-lg border border-gray-800 hover:border-blue-500/40 transition-colors"
           variants={item}
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           <div className="flex items-center mb-4">
             <motion.div 
-              className="p-2 bg-blue-100 rounded-lg"
+              className="p-2 bg-blue-500/10 text-blue-400 rounded-lg"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
               {category.icon}
             </motion.div>
-            <h3 className="ml-3 text-lg font-semibold">{category.title}</h3>
+            <h3 className="ml-3 text-lg font-semibold text-gray-100">{category.title}</h3>
           </div>
-          <p className="text-gray-600 mb-4">{category.description}</p>
+          <p className="text-gray-400 mb-4">{category.description}</p>
           <ul className="space-y-2">
             {category.skills.map((skill, skillIndex) => (
               <motion.li 
@@ -88,8 +87,8 @@ const SkillsSection = () => {
                 transition={{ delay: skillIndex * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                <span className="text-gray-600">{skill}</span>
+                <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                <span className="text-gray-300">{skill}</span>
               </motion.li>
             ))}
           </ul>

@@ -1,46 +1,22 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Github, ExternalLink, Code } from 'lucide-react';
+import { X, Github, ExternalLink } from 'lucide-react';
+import type { Project } from '../data/projects';
 
-interface Hobbies {
-  title: string;
-  description: string;
-  longDescription: string;
-  technologies: string[];
-  image: string;
-  githubUrl?: string;
-  liveUrl?: string;
-}
+type ProjectsSectionProps = {
+  items: Project[];
+};
 
-const projects: Hobbies[] = [
-  {
-    title: "Algorithm Reference to CP",
-    description: "Reference for Competitive Programming",
-    longDescription: "Contains my template, profile, and resources that I use for studying",
-    technologies: ["CP BOOKS", "Algorithms"],
-    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=2728&ixlib=rb-4.0.3",
-    githubUrl: "https://github.com/ming3465/CP-ALGO", 
-  },
-  {
-    title: "Cybersecurity CTF ",
-    description: "Custom tools for Capture The Flag competitions",
-    longDescription: "Contains links to reference as to where I study and where to practice problemsets for CTF.",
-    technologies: ["Cryptography", "Network Security"],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3",
-    githubUrl: "https://github.com/ming3465/CTF"
-  }
-];
-
-const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState<Hobbies | null>(null);
+const ProjectsSection = ({ items }: ProjectsSectionProps) => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project, index) => (
+        {items.map((project, index) => (
           <motion.div
-            key={index}
-            className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+            key={project.title}
+            className="bg-gray-900 rounded-lg border border-gray-800 hover:border-blue-500/40 transition-colors overflow-hidden cursor-pointer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,13 +32,13 @@ const ProjectsSection = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <h3 className="text-xl font-bold text-gray-100 mb-2">{project.title}</h3>
+              <p className="text-gray-400 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
-                {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                {project.technologies.slice(0, 3).map((tech) => (
                   <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                    key={tech}
+                    className="px-3 py-1 bg-blue-500/10 text-blue-300 ring-1 ring-blue-500/20 rounded-full text-sm"
                   >
                     {tech}
                   </span>
@@ -72,18 +48,18 @@ const ProjectsSection = () => {
           </motion.div>
         ))}
       </div>
-        {/* hobbies  */}
+
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-gray-900 border border-gray-800 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -97,23 +73,24 @@ const ProjectsSection = () => {
                 />
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+                  aria-label="Close"
+                  className="absolute top-4 right-4 p-2 bg-gray-900/80 text-gray-100 rounded-full shadow-lg hover:bg-gray-800 transition-colors"
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
-              
+
               <div className="p-6">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedProject.title}</h2>
-                <p className="text-gray-600 mb-6">{selectedProject.longDescription}</p>
-                
+                <h2 className="text-3xl font-bold text-gray-100 mb-4">{selectedProject.title}</h2>
+                <p className="text-gray-400 mb-6">{selectedProject.longDescription}</p>
+
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Technologies Used</h3>
+                  <h3 className="text-lg font-semibold text-gray-100 mb-3">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProject.technologies.map((tech, index) => (
+                    {selectedProject.technologies.map((tech) => (
                       <span
-                        key={index}
-                        className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                        key={tech}
+                        className="px-3 py-1 bg-blue-500/10 text-blue-300 ring-1 ring-blue-500/20 rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -127,10 +104,10 @@ const ProjectsSection = () => {
                       href={selectedProject.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-100 border border-gray-700 rounded-lg hover:bg-gray-700 transition-colors"
                     >
                       <Github className="h-5 w-5" />
-                      View 
+                      View
                     </a>
                   )}
                   {selectedProject.liveUrl && (
@@ -138,7 +115,7 @@ const ProjectsSection = () => {
                       href={selectedProject.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors"
                     >
                       <ExternalLink className="h-5 w-5" />
                       Live Demo

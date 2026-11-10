@@ -1,119 +1,76 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+import { projects, hobbies } from './data/projects';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
-import Picture from './public/Profile.jpg';
 import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-950 text-gray-100">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <motion.section 
-        id="home" 
-        className="pt-20 pb-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.h1 
-              className="text-4xl font-bold sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Welcome to My Portfolio
-            </motion.h1>
-            <motion.p 
-              className="mt-3 text-xl text-gray-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              Software Engineer | Competitive Programmer
-            </motion.p>
-          </div>
-        </div>
-      </motion.section>
+      <Hero />
 
       {/* About Section */}
-      <motion.section 
-        id="about" 
-        className="py-20 bg-white"
+      <motion.section
+        id="about"
+        className="py-20 bg-gray-900/50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <motion.div 
-              className="lg:w-1/2"
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+          <motion.div
+            className="max-w-3xl"
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-100">About me</h2>
+            <p className="mt-4 text-lg text-gray-400">
+              Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in Software Development began when I was 15 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
+              Competitive Programming.
+            </p>
+            <p className="mt-4 text-lg text-gray-400">
+              Email : sutolimin.45@gmail.com
+            </p>
+            <p className="mt-4 text-lg text-gray-400">
+               Phone : +65 8365 1042
+            </p>
+            <motion.div
+              className="mt-6 flex space-x-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ delay: 0.3 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900">About me</h2>
-              <p className="mt-4 text-lg text-gray-600">
-                Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in Software Development began when I was 15 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
-                Competitive Programming.
-              </p>
-              <p className="mt-4 text-lg text-gray-600">
-                Email : sutolimin.45@gmail.com
-              </p>
-              <p className="mt-4 text-lg text-gray-600">
-                 Phone : +65 8365 1042
-              </p>
-              <motion.div 
-                className="mt-6 flex space-x-4"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-              >
-                <a href="https://github.com/ming3465" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Github className="h-10 w-10" />
-                </a>
-                <a href="https://linkedin.com/in/sutolimin-widjaja" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Linkedin className="h-10 w-10" />
-                </a>
-                <a href="https://www.instagram.com/999ming_/" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Instagram className="h-10 w-10" />
-                </a>
-                <a href="mailto:sutolimin.45@gmail.com" className="text-gray-600 hover:text-gray-900 transition-colors">
-                  <Mail className="h-10 w-10" />
-                </a>
-              </motion.div>
+              <a href="https://github.com/ming3465" aria-label="GitHub" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="h-10 w-10" />
+              </a>
+              <a href="https://linkedin.com/in/sutolimin-widjaja" aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-10 w-10" />
+              </a>
+              <a href="https://www.instagram.com/999ming_/" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="h-10 w-10" />
+              </a>
+              <a href="mailto:sutolimin.45@gmail.com" aria-label="Email" className="text-gray-400 hover:text-white transition-colors">
+                <Mail className="h-10 w-10" />
+              </a>
             </motion.div>
-            <motion.div 
-              className="mt-8 lg:mt-0 lg:w-1/2"
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <img
-                src={Picture}
-                alt="Sutolimin Widjaja Profile Picture"
-                className="w-50 h-50 rounded-lg shadow-lg mx-auto lg:mx-0"
-              />
-            </motion.div>
-            
-          </div>
+          </motion.div>
         </div>
       </motion.section>
 
       {/* Timeline Section */}
-      <motion.section 
-        id="experience" 
-        className="py-20 bg-gray-50"
+      <motion.section
+        id="experience"
+        className="py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -124,18 +81,41 @@ function App() {
         </div>
       </motion.section>
 
-      {/* Skills Section */}
-      <motion.section 
-        id="skills" 
-        className="py-20 bg-white"
+      {/* Projects Section */}
+      <motion.section
+        id="projects"
+        className="py-20 bg-gray-900/50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 
-            className="text-3xl font-bold text-gray-900 mb-10"
+          <motion.h2
+            className="text-3xl font-bold text-gray-100 mb-10"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            Projects
+          </motion.h2>
+          <ProjectsSection items={projects} />
+        </div>
+      </motion.section>
+
+      {/* Skills Section */}
+      <motion.section
+        id="skills"
+        className="py-20"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            className="text-3xl font-bold text-gray-100 mb-10"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -147,18 +127,18 @@ function App() {
         </div>
       </motion.section>
 
-      {/* Hobbies Section (formerly Projects) */}
-      <motion.section 
-        id="hobbies" 
-        className="py-20 bg-gray-50"
+      {/* Hobbies Section */}
+      <motion.section
+        id="hobbies"
+        className="py-20 bg-gray-900/50"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2 
-            className="text-3xl font-bold text-gray-900 mb-10"
+          <motion.h2
+            className="text-3xl font-bold text-gray-100 mb-10"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -166,14 +146,14 @@ function App() {
           >
             Hobbies
           </motion.h2>
-          <ProjectsSection />
+          <ProjectsSection items={hobbies} />
         </div>
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section 
-        id="contact" 
-        className="py-20 bg-white"
+      <motion.section
+        id="contact"
+        className="py-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -181,8 +161,8 @@ function App() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <motion.h2 
-              className="text-3xl font-bold text-gray-900"
+            <motion.h2
+              className="text-3xl font-bold text-gray-100"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -190,18 +170,9 @@ function App() {
             >
               Get in Touch
             </motion.h2>
-            <motion.p 
-              className="mt-4 text-lg text-gray-600"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              
-            </motion.p>
-            <motion.a 
+            <motion.a
               href="mailto:sutolimin.45@gmail.com"
-              className="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              className="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 transition-colors"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -211,7 +182,7 @@ function App() {
             >
               Contact Me
             </motion.a>
-            
+
           </div>
         </div>
       </motion.section>
