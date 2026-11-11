@@ -34,10 +34,6 @@ function App() {
           >
             <h2 className="text-3xl font-bold text-gray-100">About me</h2>
             <p className="mt-4 text-lg text-gray-400">
-              Hi, My name is Sutolimin Widjaja. I'm usually called "Ming". My journey in Software Development began when I was 15 y.o . Currently I'm a Software Engineering Freshman at SMU with strong interest in Web Development, AI and
-              Competitive Programming.
-            </p>
-            <p className="mt-4 text-lg text-gray-400">
               Email : sutolimin.45@gmail.com
             </p>
             <p className="mt-4 text-lg text-gray-400">

@@ -12,7 +12,7 @@ const SkillsSection = () => {
     {
       title: 'Frontend',
       icon: <Code2 className="h-6 w-6" />,
-      skills: ['HTML', 'CSS', 'JavaScript','TypeScript', 'Tailwind CSS', ],
+      skills: ['HTML', 'CSS', 'JavaScript','TypeScript', 'Tailwind CSS', 'React.js', 'Vue.js'],
       description: 'Tools and technologies for web development'
     },
     {
@@ -24,13 +24,13 @@ const SkillsSection = () => {
     {
       title: 'Development',
       icon: <Code2 className="h-6 w-6" />,
-      skills: ['Docker', 'Git'],
+      skills: ['Docker', 'Git', 'GitHub'],
       description: 'Tools and technologies for web development'
     },
     {
       title: 'Current Focus',
       icon: <Globe className="h-6 w-6" />,
-      skills: ['Competitive Programming', 'Full Stack Web Development', 'AI'],
+      skills: ['Competitive Programming', 'Full Stack Web Development', 'AI', 'Low-Latency Trading Systems', 'Quant'],
       description: 'Areas of expertise and competition focus'
     }
   ];
